@@ -1,3 +1,14 @@
+/*
+*   Author: Anthony Vuong
+*   Date:   6/24/2020
+*   Title:  twoSum
+*   Speed:  580ms
+*   Memory: 9MB
+*
+*/
+
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -14,22 +25,17 @@ public:
         int tempRes = 0;
         //vector int array
         vector<int> indexes;
+        // vector size
+        int vecSize = size();
 
-        //loop through array
-            // save element 0 to index1 var
-            //loop through remaining elements
-                //if element n + element index1 var is equal to target
-                    //save index n to index2 var
-                    //break;
-
-        for(int i = 0; i < nums.size(); ++i)
+        for(int i = 0; i < vecSize; ++i)
         {
             index1 = i;
-            for(int j = 1; j < nums.size(); ++j)
+            for(int j = 1; j < vecSize; ++j)
             {
                 index2 = j;
                 tempRes = nums[i] + nums[j];
-                if(tempRes == target)
+                if(tempRes == target && j != i)
                 {
                     indexes.push_back(index1);
                     indexes.push_back(index2);
