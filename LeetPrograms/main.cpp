@@ -16,17 +16,16 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-
+        //vector int array
+        vector<int> indexes;
         // index1 var
         int index1 = 0;
         // index2 var
         int index2 = 0;
         //temp var
         int tempRes = 0;
-        //vector int array
-        vector<int> indexes;
         // vector size
-        int vecSize = size();
+        int vecSize = nums.size();
 
         for(int i = 0; i < vecSize; ++i)
         {
