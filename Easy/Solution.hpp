@@ -8,6 +8,8 @@ class Solution
 public:
     public:
     int findLucky(vector<int>& arr);
+    vector<int> twoSum(vector<int>& nums, int target);
+
 };
 
 #endif // SOLUTION_HPP

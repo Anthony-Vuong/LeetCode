@@ -26,3 +26,33 @@ int Solution::findLucky(vector<int>& arr) {
     return lucky_num;
 }
 
+vector<int> Solution::twoSum(vector<int>& nums, int target) {
+    //vector int array
+    vector<int> indexes;
+    // index1 var
+    int index1 = 0;
+    // index2 var
+    int index2 = 0;
+    //temp var
+    int tempRes = 0;
+    // vector size
+    int vecSize = nums.size();
+
+    for(int i = 0; i < vecSize; ++i)
+    {
+        index1 = i;
+        for(int j = 1; j < vecSize; ++j)
+        {
+            index2 = j;
+            tempRes = nums[i] + nums[j];
+            if(tempRes == target && j != i)
+            {
+                indexes.push_back(index1);
+                indexes.push_back(index2);
+                return indexes;
+            }
+        }
+    }
+    return indexes;
+}
+
