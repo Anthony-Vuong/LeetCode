@@ -56,3 +56,16 @@ vector<int> Solution::twoSum(vector<int>& nums, int target) {
     return indexes;
 }
 
+int Solution::numIdenticalPairs(vector<int>& nums) {
+    int goodPairs{0};
+    
+    for(int i{0}; i < nums.size(); ++i){
+        for(int j{i+1}; j < nums.size(); ++j ){
+            if(i < j && nums.at(i) == nums.at(j)){
+                goodPairs = goodPairs + 1;
+            }
+        }
+    }
+    return goodPairs;
+}
+
