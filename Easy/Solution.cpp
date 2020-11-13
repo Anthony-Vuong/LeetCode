@@ -1,5 +1,6 @@
 #include "Solution.hpp"
 #include <vector>
+#include <algorithm>
 
 
 int Solution::findLucky(vector<int>& arr) {
@@ -69,3 +70,14 @@ int Solution::numIdenticalPairs(vector<int>& nums) {
     return goodPairs;
 }
 
+int Solution::maxProduct(vector<int>& nums) {
+    int i{0};
+    int j{0};
+    
+    sort(nums.begin(), nums.end());
+    
+    i = nums.at(nums.size() - 1);
+    j = nums.at(nums.size() - 2);
+    
+    return (i - 1) * (j - 1);
+}
