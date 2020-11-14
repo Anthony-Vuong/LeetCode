@@ -116,3 +116,16 @@ bool Solution::judgeCircle(string moves) {
     return false;
 }
 
+vector<int> Solution::runningSum(vector<int>& nums) {
+    int sum{0};
+    int len = nums.size();
+    
+    for(int i{0}; i < len; i++){
+        sum += nums.at(i);
+        nums.at(i) = sum;
+    }
+    
+    return nums;
+    
+}
+

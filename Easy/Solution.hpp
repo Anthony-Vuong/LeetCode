@@ -14,6 +14,7 @@ public:
     int numIdenticalPairs(vector<int>& nums);
     int maxProduct(vector<int>& nums);
     bool judgeCircle(string moves);
+    vector<int> runningSum(vector<int>& nums);
 
 };
 
