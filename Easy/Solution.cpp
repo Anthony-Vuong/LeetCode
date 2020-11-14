@@ -1,6 +1,7 @@
 #include "Solution.hpp"
 #include <vector>
 #include <algorithm>
+#include <string>
 
 
 int Solution::findLucky(vector<int>& arr) {
@@ -81,3 +82,37 @@ int Solution::maxProduct(vector<int>& nums) {
     
     return (i - 1) * (j - 1);
 }
+
+
+bool Solution::judgeCircle(string moves) {
+    int i{0};
+    int len = moves.length();
+    int UD{0};
+    int LR{0};
+    
+    while(i < len){
+        switch(moves[i]){
+            case 'U':
+                UD++;
+                break;
+            case 'D':
+                UD--;
+                break;
+            case 'L':
+                LR--;
+                break;
+            case 'R':
+                LR++;
+                break;
+            default:
+                break;
+        }
+        i++;
+    }
+    if(LR == 0 && UD == 0){
+        return true;
+    }
+    
+    return false;
+}
+

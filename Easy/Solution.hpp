@@ -1,7 +1,9 @@
 #ifndef SOLUTION_HPP
 #define SOLUTION_HPP
 #include <vector>
+#include <string>
 using std::vector;
+using std::string;
 
 class Solution
 {
@@ -11,6 +13,7 @@ public:
     vector<int> twoSum(vector<int>& nums, int target);
     int numIdenticalPairs(vector<int>& nums);
     int maxProduct(vector<int>& nums);
+    bool judgeCircle(string moves);
 
 };
 
