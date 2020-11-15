@@ -8,6 +8,8 @@ class Solution
 public:
     public:
     vector<int> findDuplicates(vector<int>& nums);
+    vector<int> countBits(int num);
+
 
 };
 

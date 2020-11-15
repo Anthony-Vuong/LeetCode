@@ -18,3 +18,24 @@ vector<int> Solution::findDuplicates(vector<int>& nums) {
     
     return dups;
 }
+
+vector<int> Solution::countBits(int num) {
+    unsigned int oneCount{0};
+    int j{0};
+    vector<int> binaryVec(num+1);
+            
+    for(int i{0}; i <= num; ++i){
+        j = i;
+        while(j > 0){
+            if((j & 1) == 1){
+                oneCount++;
+            }
+            j = j >> 1;
+        }
+        binaryVec.at(i) = oneCount;
+        oneCount = 0;
+    }
+
+    return binaryVec;  
+
+}
