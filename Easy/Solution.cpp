@@ -129,3 +129,19 @@ vector<int> Solution::runningSum(vector<int>& nums) {
     
 }
 
+int Solution::countNegatives(vector<vector<int>>& grid) {
+        
+    int negatives{0};
+
+    for(int i{0}; i < grid.size(); ++i){
+        for(int j{0}; j < grid.at(i).size(); ++j){
+            if(grid.at(i).at(j) < 0){
+                negatives++;
+            }            
+        }
+    }
+
+    return negatives;
+
+}
+

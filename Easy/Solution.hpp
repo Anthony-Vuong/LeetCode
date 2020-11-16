@@ -15,6 +15,8 @@ public:
     int maxProduct(vector<int>& nums);
     bool judgeCircle(string moves);
     vector<int> runningSum(vector<int>& nums);
+    int countNegatives(vector<vector<int>>& grid);
+
 
 };
 
