@@ -145,3 +145,47 @@ int Solution::countNegatives(vector<vector<int>>& grid) {
 
 }
 
+vector<int> Solution::luckyNumbers (vector<vector<int>>& matrix) {
+    vector<int> luckyNums;
+    int max{0};
+    int min{0};
+    int m = matrix.size();          //# of vectors
+    int n = matrix.at(0).size();    //size of each vector
+    int mins[n];
+    int maxs[m];
+
+    
+    // 3  7  8
+    // 9  11 13
+    // 15 16 17
+    
+    // 1 1 1
+    // 1 2 1
+    // 1 2 3
+    
+    for(int i{0}; i < m; ++i){
+        //min finder
+        for(int j{0}; j < n; ++j){
+            if(matrix.at(i).at(j) > min){
+                min = i;
+            }
+        }
+        mins[i] = min;
+    }
+    
+    for(int i{0}; i < m; ++i){
+        //min finder
+        for(int j{0}; j < n; ++j){
+            if(matrix.at(i).at(j) > min){
+                min = i;
+            }
+        }
+        mins[i] = min;
+    }
+   
+    
+    
+    return luckyNums;
+    
+}
+

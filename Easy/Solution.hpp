@@ -16,6 +16,7 @@ public:
     bool judgeCircle(string moves);
     vector<int> runningSum(vector<int>& nums);
     int countNegatives(vector<vector<int>>& grid);
+    vector<int> luckyNumbers (vector<vector<int>>& matrix);
 
 
 };
