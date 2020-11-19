@@ -188,3 +188,22 @@ vector<int> luckyNumbers (vector<vector<int>>& matrix) {
     
 }
 
+
+//INCOMPLETE
+vector<int> Solution::intersection(vector<int>& nums1, vector<int>& nums2) {
+    int s1 = nums1.size();
+    int s2 = nums2.size();
+    vector<int> dups;
+    
+    
+    for(int i{0}; i < s1; ++i){
+        for(int j{0}; j < s2; ++j){
+            if(nums1.at(i) == nums2.at(j) && find(dups.begin(), dups.end(), nums1.at(i)) != dups.end()){
+                dups.push_back(nums1.at(i));
+                //nums2.erase(nums2.begin);
+            }
+        }
+    }
+    return dups;
+}
+
