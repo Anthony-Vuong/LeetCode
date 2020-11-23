@@ -145,7 +145,7 @@ int Solution::countNegatives(vector<vector<int>>& grid) {
 
 }
 
-vector<int> luckyNumbers (vector<vector<int>>& matrix) {
+vector<int> Solution::luckyNumbers (vector<vector<int>>& matrix) {
     vector<int> luckyNums;
     int max{0};
     int min{matrix.at(0).at(0)};
@@ -190,7 +190,7 @@ vector<int> luckyNumbers (vector<vector<int>>& matrix) {
 
 
 //COMPLETE, BUT VERY SLOW
- vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+ vector<int> Solution::intersection(vector<int>& nums1, vector<int>& nums2) {
     int s1 = nums1.size();
     int s2 = nums2.size();
     vector<int> dups;
@@ -204,5 +204,31 @@ vector<int> luckyNumbers (vector<vector<int>>& matrix) {
         }
     }
     return dups;
+}
+
+//COMPLETE, BUT VERY SLOW
+vector<bool> Solution::kidsWithCandies(vector<int>& candies, int extraCandies) {
+    int len = candies.size();
+    vector<bool> maxCandies(len);
+    
+    for(int i{0}; i < len; ++i){
+        maxCandies.at(i) = true;
+    }
+
+    
+    for(int i{0}; i < len; ++i){
+        for(int j{0}; j < len; ++j){
+            if(j == i && j != len-1){
+                j++;
+            }
+            int currMaxCandies = candies.at(i) + extraCandies;
+            if(currMaxCandies < candies.at(j)){
+                maxCandies.at(i) = false;
+                break;
+            }
+        }
+    }
+    
+    return maxCandies;
 }
 
