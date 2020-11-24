@@ -9,6 +9,8 @@ public:
     public:
     vector<int> findDuplicates(vector<int>& nums);
     vector<int> countBits(int num);
+    int maxScore(vector<int>& cardPoints, int k);
+
 
 
 };
