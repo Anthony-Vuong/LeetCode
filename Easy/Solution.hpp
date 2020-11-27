@@ -19,6 +19,8 @@ public:
     vector<int> luckyNumbers (vector<vector<int>>& matrix);
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2);
     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies);
+    void reverseString(vector<char>& s);
+
 
 
 };

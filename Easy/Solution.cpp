@@ -232,3 +232,17 @@ vector<bool> Solution::kidsWithCandies(vector<int>& candies, int extraCandies) {
     return maxCandies;
 }
 
+void Solution::reverseString(vector<char>& s) {
+    
+    char temp;
+    unsigned long len{s.size()};
+    
+    cout << s.size();
+    
+    for(int i{0}; i < len / 2; ++i){
+        temp = s.at(i);
+        s.at(i) = s.at((len-1) - i);
+        s.at((len-1) - i) = temp;
+    }
+}
+
