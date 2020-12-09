@@ -2,6 +2,9 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <iostream>
+
+using namespace std;
 
 
 int Solution::findLucky(vector<int>& arr) {
@@ -235,7 +238,7 @@ vector<bool> Solution::kidsWithCandies(vector<int>& candies, int extraCandies) {
 void Solution::reverseString(vector<char>& s) {
     
     char temp;
-    unsigned long len{s.size()};
+    unsigned long long len{s.size()};
     
     cout << s.size();
     
@@ -244,5 +247,26 @@ void Solution::reverseString(vector<char>& s) {
         s.at(i) = s.at((len-1) - i);
         s.at((len-1) - i) = temp;
     }
+}
+
+vector<int> Solution::replaceElements(vector<int>& arr) {
+        
+    unsigned long long len{arr.size()};
+    int max{0};
+    
+    for(int i{0}; i < len; ++i){
+        if(i == len -1){
+            arr[i] = -1;
+            break;
+        }
+        for(int j{i+1}; j < len; ++j){
+            if(arr[j] > max){
+                max = arr[j];
+            }
+        }
+        arr[i] = max;
+        max = 0;
+    }
+    return arr;
 }
 
