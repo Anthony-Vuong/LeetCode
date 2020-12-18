@@ -270,3 +270,16 @@ vector<int> Solution::replaceElements(vector<int>& arr) {
     return arr;
 }
 
+ string Solution::restoreString(string s, vector<int>& indices) {
+        
+    unsigned long strLen = s.length();
+    string newStr(strLen, ' ');
+    
+    for(int i{0}; i < strLen; ++i){
+        newStr.at(indices.at(i)) = s.at(i);
+    }
+    
+    return newStr;
+    
+}
+

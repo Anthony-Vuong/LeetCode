@@ -21,6 +21,8 @@ public:
     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies);
     void reverseString(vector<char>& s);
     vector<int> replaceElements(vector<int>& arr);
+    string restoreString(string s, vector<int>& indices);
+
 
 
 
